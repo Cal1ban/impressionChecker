@@ -1,6 +1,7 @@
 import csv
 import urllib2
 import json
+import sys
 
 def openFiles(fileToRead,fileToWrite):
     #open file to read
@@ -65,6 +66,7 @@ def checkHTTPS(urlString):
         e='secure'
         return e
 
-
+fileToRead = sys.argv[1]
+fileToWrite = sys.argv[2]
 #call this with desired input and output files (file to read from, file to write to)
-openFiles('/Users/georgeseed/tl_test/SolutionsData.csv','/Users/georgeseed/tl_test/SolutionsData-Parsed.csv')
+openFiles(fileToRead,fileToWrite)
